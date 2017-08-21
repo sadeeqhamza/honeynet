@@ -33,6 +33,14 @@
     </script> 
     <script src="js/materialize.min.js" type="text/javascript">
     </script> 
+    <script>
+        
+         var myurl = 'http://localhost:3000/getHoney';
+
+   $.ajax({url:myurl, success: function(result){
+      console.log(result);
+    }});
+    </script>
 
     
 </body>
