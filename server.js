@@ -85,7 +85,7 @@ app.get('/getHoneyGeo', function(req, res) {
             }
             console.log(geoData);
 
-            res.send(geoData);
+            res.send(JSON.parse(geoData));
 
         }
     })
