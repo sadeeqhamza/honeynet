@@ -7,6 +7,7 @@
   "dependencies": {
     "cors": "^2.8.4",
     "express": "latest",
+    "geo-from-ip": "^1.1.3",
     "inbox": "^1.1.59",
     "jsonfile": "^3.0.1",
     "request": "^2.72.0"
