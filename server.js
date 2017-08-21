@@ -4,20 +4,18 @@ var router = express.Router();
 var path = __dirname + '/views/';
 
 
+
 app.use(express.static('public'));
-
-
-
-router.use(function (req,res,next) {
-  console.log("/" + req.method);
-  next();
+router.use(function(req, res, next) {
+    console.log("/" + req.method);
+    next();
 });
-
-router.get("/",function(req,res){
-  res.sendFile(path + "index.html");
+router.get("/", function(req, res) {
+    res.sendFile(path + "index.html");
 });
+app.use("/", router);
 
-app.use("/",router);
+
 
 var request = require('request');
 
@@ -36,4 +34,8 @@ app.get('/getHoney', function (req, res) {
 
 
 var port = process.env.PORT || 3000;
+<<<<<<< Updated upstream
 app.listen(port);
+=======
+app.listen(port);
+>>>>>>> Stashed changes
