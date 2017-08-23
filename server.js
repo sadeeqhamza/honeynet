@@ -61,7 +61,8 @@ app.get('/getHoneyGeo', function(req, res) {
                         source_port: myObj.data[i].source_port,
                         source_ip: myObj.data[i].source_ip,
                         lat: geoip.allData(myObj.data[i].source_ip).location.latitude,
-                        lon: geoip.allData(myObj.data[i].source_ip).location.longitude
+                        lon: geoip.allData(myObj.data[i].source_ip).location.longitude,
+                        country: geoip.allData(myObj.data[i].source_ip).country
 
                     });
 
@@ -76,6 +77,7 @@ app.get('/getHoneyGeo', function(req, res) {
                         protocol: myObj.data[i].protocol,
                         timestamp: myObj.data[i].timestamp,
                         source_ip: myObj.data[i].source_ip,
+                        country:'n/a'
 
                     });
 
